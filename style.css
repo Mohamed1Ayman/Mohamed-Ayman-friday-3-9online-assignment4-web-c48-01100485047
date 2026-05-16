@@ -67,6 +67,63 @@ body {
   height: 100dvh;
   border-bottom: 4px solid var(--primary-color);
   padding-bottom: 30px;
+  position: relative;
+}
+
+#home::after{
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: rgba(128, 128, 128, 0.1);
+  position: absolute;
+  bottom: 150px;
+  left: 50px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+#home::before{
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: rgba(128, 128, 128, 0.1);
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.squar1 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(128, 128, 128, 0.1);
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  transform: rotate(45deg);
+}
+
+.squar2 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(128, 128, 128, 0.1);
+  position: absolute;
+  top: 90px;
+  right: 300px;
+  transform: rotate(45deg);
+}
+
+
+
+.squar3 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(128, 128, 128, 0.1);
+  position: absolute;
+  bottom: 150px;
+  right: 30px;
+  transform: rotate(45deg);
 }
 
 #home .content {
@@ -1156,14 +1213,17 @@ padding-right: 2rem;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    border-radius: 5px;
     gap: 5px;
     padding: 10px;
     z-index: 200;
+    border: 2px solid var(--primary-color);
+    box-shadow: 4px 4px 0 var(--primary-color);
   }
 
   .hamburger span {
     display: block;
-    width: 28px;
+    width: 20px;
     height: 3px;
     background-color: var(--primary-color);
     transition: all 0.3s ease;
@@ -1628,6 +1688,11 @@ padding-right: 2rem;
 
 /* Small Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
+
+  #home{
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+  }
   #home .title {
     font-size: 18px;
   }
